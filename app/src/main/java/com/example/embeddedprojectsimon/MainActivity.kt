@@ -4,14 +4,10 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.embeddedprojectsimon.ui.theme.EmbeddedProjectSimonTheme
+import com.example.embeddedprojectsimon.ui.screens.GameScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,29 +15,29 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             EmbeddedProjectSimonTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    GameScreen(
+                        onColorClick = { /* TODO: Gestisci il click sui colori */ },
+                        onCancelClick = { /* TODO: Gestisci il click su Cancel */ },
+                        onEndGameClick = { /* TODO: Gestisci il click su End Game */ },
+                        sequenceText = "Sequence: R G B" // Placeholder
                     )
-                }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun DefaultPreview() {
     EmbeddedProjectSimonTheme {
-        Greeting("Android")
+            GameScreen(
+                onColorClick = { /* TODO: Gestisci il click sui colori */ },
+                onCancelClick = { /* TODO: Gestisci il click su Cancel */ },
+                onEndGameClick = { /* TODO: Gestisci il click su End Game */ },
+                sequenceText = "Sequence: R G B"
+            )
     }
 }
+
+
+

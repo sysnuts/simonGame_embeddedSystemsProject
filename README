@@ -1,4 +1,4 @@
 Simon Game - Progetto di Sistemi Embedded - Anno Accademico 2025-2026
 
-Per lo sviluppo e' stato utilizzato un dispositivo android virtuale con android 17.0, in android studio e' il "Medium Phone".
+Per lo sviluppo e' stato utilizzato un dispositivo android virtuale con android 17.0, in android studio corrisponde al "Medium Phone".
 L'applicazione e' stata sviluppata in kotlin, utilizzando la tecnologia Jetpack Compose.
