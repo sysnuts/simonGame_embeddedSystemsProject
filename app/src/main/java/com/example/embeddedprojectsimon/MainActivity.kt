@@ -4,38 +4,29 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.activity.viewModels
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import com.example.embeddedprojectsimon.ui.theme.EmbeddedProjectSimonTheme
 import com.example.embeddedprojectsimon.ui.screens.GameScreen
+import com.example.embeddedprojectsimon.viewmodel.GameViewModel
 
 class MainActivity : ComponentActivity() {
+    val viewModel by viewModels<GameViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val currentSequence by viewModel.selectedColors.collectAsState()
             EmbeddedProjectSimonTheme {
                     GameScreen(
-                        onColorClick = { /* TODO: Gestisci il click sui colori */ },
-                        onCancelClick = { /* TODO: Gestisci il click su Cancel */ },
-                        onEndGameClick = { /* TODO: Gestisci il click su End Game */ },
-                        sequenceText = "Sequence: R G B" // Placeholder
+                        onColorClick = { viewModel.addColor(it) },
+                        onClearClick = { viewModel.clearSelectedColors() },
+                        onEndGameClick = { viewModel.addSavedGame(viewModel.selectedColors.value) },
+                        sequenceText = currentSequence.joinToString(", ") { it.initial.toString() },
                     )
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    EmbeddedProjectSimonTheme {
-            GameScreen(
-                onColorClick = { /* TODO: Gestisci il click sui colori */ },
-                onCancelClick = { /* TODO: Gestisci il click su Cancel */ },
-                onEndGameClick = { /* TODO: Gestisci il click su End Game */ },
-                sequenceText = "Sequence: R G B"
-            )
     }
 }
 

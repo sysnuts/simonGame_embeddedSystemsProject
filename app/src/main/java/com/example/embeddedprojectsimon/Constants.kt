@@ -2,7 +2,7 @@ package com.example.embeddedprojectsimon
 
 import androidx.compose.ui.graphics.Color
 
-enum class GameColor(val initial: Char, val composeColor: Color) {
+enum class GameColor(val initial: Char, val boxColor: Color) {
     RED('R', Color.Red),
     GREEN('G', Color.Green),
     BLUE('B', Color.Blue),
