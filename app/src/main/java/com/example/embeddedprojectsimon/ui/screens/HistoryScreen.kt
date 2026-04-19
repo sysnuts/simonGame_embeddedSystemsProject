@@ -50,7 +50,7 @@ fun HistoryScreen(
                     )
                         if (game.isEmpty()) {
                             Text(
-                                text = stringResource(R.string.string_emptyList),
+                                text = "-",
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                                 textAlign = TextAlign.End,

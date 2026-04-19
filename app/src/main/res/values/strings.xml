@@ -3,7 +3,7 @@
     <string name="btn_clear">Clear</string>
     <string name="btn_endGame">End Game</string>
     <string name="btn_goBack">Go Back</string>
-    <string name="string_emptyList">No colors</string>
+    <string name="string_emptyList">No colors selected</string>
     <string name="string_screen_history">History</string>
     <string name="string_count">Pressed: %d</string>
 </resources>

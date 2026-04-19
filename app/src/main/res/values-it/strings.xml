@@ -4,7 +4,7 @@
     <string name="btn_clear">Pulisci</string>
     <string name="btn_endGame">Fine partita</string>
     <string name="btn_goBack">Torna indietro</string>
-    <string name="string_emptyList">Nessun colore</string>
+    <string name="string_emptyList">Nessun colore selezionato</string>
     <string name="string_screen_history">Storia</string>
     <string name="string_count">Premuti: %d</string>
 </resources>
