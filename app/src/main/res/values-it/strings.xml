@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Embedded Project Simon</string>
+    <string name="app_name">Progetto Embedded Simon</string>
     <string name="btn_clear">Pulisci</string>
     <string name="btn_endGame">Fine partita</string>
+    <string name="btn_goBack">Torna indietro</string>
+    <string name="string_emptyList">Nessun colore</string>
+    <string name="string_screen_history">Storia</string>
+    <string name="string_count">Premuti: %d</string>
 </resources>

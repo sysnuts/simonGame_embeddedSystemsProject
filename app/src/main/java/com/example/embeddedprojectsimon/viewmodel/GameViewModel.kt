@@ -23,6 +23,5 @@ class GameViewModel : ViewModel() {
     fun addSavedGame(game: List<GameColor>) {
         _savedGames.value += listOf(game)
         clearSelectedColors()
-        // TODO Passa alla schermata 2
     }
 }
